@@ -1,10 +1,10 @@
 {
   "name": "react-native-twilio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A React Native wrapper for the Twilio mobile SDK",
   "repository": {
     "type": "git",
-    "url": "git@github.com:fabriziomoscon/react-native-twilio.git"
+    "url": "git@github.com:yuuigara/react-native-twilio.git"
   },
   "main": "index.js",
   "scripts": {
