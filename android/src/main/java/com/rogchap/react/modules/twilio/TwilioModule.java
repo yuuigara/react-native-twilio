@@ -67,6 +67,7 @@ public class TwilioModule extends ReactContextBaseJavaModule implements Connecti
             intent.removeExtra(Device.EXTRA_CONNECTION);
 
             _pendingConnection = incomingConnection;
+            _pendingConnection.setConnectionListener(_receiver._cl);
 
             Map<String, String> connParams = _pendingConnection.getParameters();
             params = Arguments.createMap();
@@ -216,7 +217,6 @@ public class TwilioModule extends ReactContextBaseJavaModule implements Connecti
     @ReactMethod
     public void accept() {
         _pendingConnection.accept();
-        _pendingConnection.setConnectionListener(_receiver._cl);
         _connection = _pendingConnection;
         _pendingConnection = null;
     }
